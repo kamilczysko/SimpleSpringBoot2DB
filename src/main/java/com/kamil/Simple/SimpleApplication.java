@@ -109,18 +109,20 @@ public class SimpleApplication implements CommandLineRunner {
 //        System.out.println(f4);
 
 
-        List<Food> all = fs.getAll();
+        List<Food> all = fs.getFoodPrice("steak");
         System.out.println(all);
 
-        List<Animal> animals = as.getAnimals();
+//        List<Animal> animals = as.getAnimals();
+//
+//        List<Breed> breeds = bs.getBreeds();
+//
+//        List<Owner> owners = os.getOwners();
+//
+//        System.out.println(animals);
+//        System.out.println(breeds);
+//        System.out.println(owners);
+//
 
-        List<Breed> breeds = bs.getBreeds();
-
-        List<Owner> owners = os.getOwners();
-
-        System.out.println(animals);
-        System.out.println(breeds);
-        System.out.println(owners);
 
     }
 
