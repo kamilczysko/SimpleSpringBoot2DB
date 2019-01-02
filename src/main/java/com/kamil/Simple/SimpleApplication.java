@@ -109,8 +109,8 @@ public class SimpleApplication implements CommandLineRunner {
 //        System.out.println(f4);
 
 
-        List<Food> all = fs.getFoodPrice("steak");
-        System.out.println(all);
+//        List<Food> all = fs.getFoodPrice("steak");
+//        System.out.println(all);
 
 //        List<Animal> animals = as.getAnimals();
 //

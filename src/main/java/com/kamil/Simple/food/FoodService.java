@@ -23,17 +23,20 @@ public class FoodService {
         return fr.save(f);
     }
 
-    public List<Food> getAll() {
-        return fr.findAll();
+    public List<String> getAll() {
+        List resultList = em.createQuery("SELECT DISTINCT f.name FROM Food f").getResultList();
+        return resultList;
     }
 
     public void deleteFood(int id) {
         fr.deleteById(id);
     }
 
-    public List getFoodPrice(String foodName) {
+    public float getFoodPrice(String foodName) {
         List food = em.createQuery("SELECT DISTINCT f.price FROM Food f WHERE f.name=:fd", Float.class).setParameter("fd", foodName).getResultList();
-        return food;
+        if (food.isEmpty())
+            return 0.0f;
+        return (float)food.get(0);
     }
 
 }
